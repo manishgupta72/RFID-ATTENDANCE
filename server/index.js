@@ -25,7 +25,7 @@ app.get("/",(req,res,next)=>{return res.status(200).json({success:true,message:"
 
 app.use(errorMiddleware);
 // step2 hosting
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT ;
 
 connectToDB().then(() => {
   app.listen(PORT, () => {
